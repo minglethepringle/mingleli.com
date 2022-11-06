@@ -1,0 +1,50 @@
+/*
+    Colors:
+    - White: #ffffff
+    - Off-Black: #151414
+*/
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    font-family: Poppins, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #151414;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #151414;
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}

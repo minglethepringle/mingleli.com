@@ -1,0 +1,39 @@
+/* Banner */
+section.section-banner {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+div.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 550px;
+}
+
+img.profile-pic {
+    border-radius: 50%;
+    width: 200px;
+}
+
+div.socials-container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.socials-container a {
+    width: 2.5rem;
+    margin-right: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+
+div.socials-container a:hover {
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
