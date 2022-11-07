@@ -226,6 +226,12 @@ section.section-cat {
 div.cat-slideshow {
     margin: 2rem 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 550px;
+    height: 300px;
 }
 
 button.slideshow-btn {
@@ -251,10 +257,6 @@ button.slideshow-btn.right {
     right: 0;
 }
 
-img.cat-img {
-    max-height: 400px;
-}
-
 /* Footer */
 footer {
     padding: 2rem 0;
@@ -267,3 +269,65 @@ footer {
     background-color: #efefef
 }
 
+/* Media Queries for Phone */
+@media (max-width: 820px) {
+    body {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 2rem;
+    }
+
+    div.json-container {
+        width: 100%;
+    }
+
+    div.card {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    div.card-details {
+        padding: 1.5rem 0;
+    }
+
+    ul.position-desc {
+        text-align: left;
+        margin-left: 2rem;
+    }
+
+    ul.tech-labels {
+        justify-content: center;
+    }
+
+    ul.tech-labels li {
+        font-size: 0.5rem;
+    }
+
+    div.skills {
+        width: 100%;
+    }
+
+    div.cat-slideshow {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    div.banner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    div.socials-container {
+        justify-content: center;
+    }
+
+    div.socials-container a{
+        margin: 0 1rem;
+    }
+}
