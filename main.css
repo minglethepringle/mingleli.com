@@ -19,7 +19,7 @@ img.profile-pic {
 }
 
 div.socials-container {
-    margin: 1rem 0;
+    margin: 1rem 0 1.5rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -37,3 +37,233 @@ div.socials-container a:hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
 }
+
+/* JSON */
+section.section-json {
+    flex-direction: column;
+}
+
+div.json-container {
+    background-color: #282c34;
+    color: #cdcdcd;
+
+    margin: 1rem 0;
+    padding: 3rem 4rem;
+    width: 550px;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+div.window-btns {
+    margin: 1rem 0;
+}
+
+div.window-btns svg {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+p.indent {
+    margin-left: 2rem;
+}
+
+span.key {
+    color: #56b6c2;
+    margin-right: 0.25rem;
+}
+
+span.value {
+    color: #98c379;
+}
+
+span.value.number {
+    color: #d19a66;
+}
+
+span.value a {
+    color: #98c379;
+    text-decoration: none;
+    border-bottom: 1px solid #98c379;
+}
+
+/* Work */
+section.section-work {
+    flex-direction: column;
+}
+
+div.card {
+    margin: 1rem 0;
+    width: 800px;
+    padding: 1.5rem;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+
+}
+
+img.card-pic {
+    width: 150px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+img.card-pic:hover {
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+div.card-details {
+    padding-left: 1.5rem;
+}
+
+span.position-date {
+    font-size: 0.75rem;
+    color: #696969;
+}
+
+ul.position-desc {
+    margin: 0;
+    padding: 0;
+}
+
+ul.position-desc li {
+    margin: 0.5rem 1.5rem;
+}
+
+ul.tech-labels {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+ul.tech-labels li {
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    background-color: #151414;
+    color: #cdcdcd;
+    font-size: 0.75rem;
+    transition: all .3s ease-in-out;
+}
+
+ul.tech-labels li:hover {
+    cursor: default;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+}
+
+/* Projects */
+section.section-projects {
+    flex-direction: column;
+}
+
+div.project-links {
+    margin: 0.5rem 0;
+}
+
+div.project-links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+div.project-links img {
+    width: 20px;
+    transition: all .3s ease-in-out;
+}
+
+div.project-links img:hover {
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+/* Skills */
+section.section-skills {
+    flex-direction: column;
+}
+
+div.skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 550px;
+}
+
+div.skills img {
+    height: 3.5rem;
+    margin: 0.5rem;
+    transition: all .3s ease-in-out;
+}
+
+div.skills img:hover {
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+/* Cat Corner */
+section.section-cat {
+    flex-direction: column;
+}
+
+div.cat-slideshow {
+    margin: 2rem 0;
+    position: relative;
+}
+
+button.slideshow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    border: none;
+    background-color: rgba(21, 20, 20, 0.5);
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+button.slideshow-btn:hover {
+    cursor: pointer;
+}
+
+button.slideshow-btn.left {
+    left: 0;
+}
+
+button.slideshow-btn.right {
+    right: 0;
+}
+
+img.cat-img {
+    max-height: 400px;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #151414;
+    font-size: 0.75rem;
+    background-color: #efefef
+}
+

@@ -18,47 +18,258 @@
         <div class="banner-container">
             <img class="profile-pic" src="./img/profile.jpg" alt="profile">
             <div class="banner-text">
-                <h1>mingle li</h1>
-                <h2>swe, student @ neu</h2>
+                <h1>Mingle Li</h1>
+                <h3>Software Engineer, Student</h3>
                 <div class="socials-container">
                     <a href="https://github.com/minglethepringle" target="_blank">
-                        <img src="./img/github.png" alt="github">
+                        <img src="./img/icons/github.png" alt="github">
                     </a>
                     <a href="https://www.linkedin.com/in/mingleli/" target="_blank">
-                        <img src="./img/linkedin.png" alt="linkedin">
+                        <img src="./img/icons/linkedin.png" alt="linkedin">
                     </a>
                     <a href="mailto:mingle.g.li@gmail.com" target="_blank">
-                        <img src="./img/email.png" alt="email">
+                        <img src="./img/icons/email.png" alt="email">
                     </a>
                 </div>
-                <button>resume</button>
+                <a href="./resume.pdf" target="_blank"><button>resume</button></a>
             </div>
         </div>
     </section>
 
     <!-- JSON section -->
     <section class="section-json">
-        <p>JSON</p>
+        <h2>About Me</h2>
+
+        <div class="json-container">
+            <div class="window-btns">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+            </div>
+            <p>{</p>
+                <p class="indent"><span class="key">"name"</span>: <span class="value">"Mingle Li"</span>,</p>
+                <p class="indent"><span class="key">"born"</span>: <span class="value number">2003</span>,</p>
+                <p class="indent"><span class="key">"location"</span>: <span class="value">"Massachusetts"</span>,</p>
+                <p class="indent"><span class="key">"school"</span>: <span class="value">"Northeastern University"</span>,</p>
+                <p class="indent"><span class="key">"loves"</span>: [<span class="value">"code"</span>,
+                    <span class="value">"cats"</span>,
+                    <span class="value">"computers"</span>],</p>
+                <p class="indent"><span class="key">"videoGames"</span>: [<span class="value">"Rocket League"</span>,
+                        <span class="value">"Fortnite"</span>],</p>
+                <p class="indent"><span class="key">"sports"</span>: [<span class="value">"ping pong"</span>,
+                            <span class="value">"volleyball"</span>],</p>
+                <p class="indent"><span class="key">"instrument"</span>: <span class="value">"<a href="https://www.youtube.com/watch?v=6Dg6jwdznJE" target="_blank">marimba</a>"</span>,</p>
+                <p class="indent"><span class="key">"personalityType"</span>: <span class="value">"ESFJ"</span>,</p>
+                <p class="indent"><span class="key">"takenBy"</span>: <span class="value">"Lilli Tobe ❤️"</span></p>
+            <p>}</p>
+        </div>
     </section>
 
-    <!-- About Me -->
-    <section class="section-about">
-        <p>About</p>
-    </section>
-
+    
     <!-- Work -->
     <section class="section-work">
-        <p>Work</p>
+        <h2>Work Experience</h2>
+
+        <div class="card">
+            <img class="card-pic" src="./img/work/wordpress.png" alt="wordpress">
+            <div class="card-details">
+                <h3><b>Web Developer</b></h3>
+                <p>Freelance</p>
+                <span class="position-date">Sep 2019 - present</span>
+                <ul class="position-desc">
+                    <li>Used HTML/CSS to create main website for <a class="border" href="https://www.petuniaspetparlor.com/" target="_blank">Petunia's Pet Parlor</a></li>
+                    <li>Utilized WordPress to design and create mobile-responsive sites for <a class="border" href="https://sapporobbq.com/" target="_blank">Sapporo Restaurant</a>,
+                        <a class="border" href="https://wellesleyfca.com/" target="_blank">Wellesley Family Care</a>, <a class="border" href="https://nowyouarefreepod.com/" target="_blank">Now You Are Free Podcast</a>, and <a class="border" href="https://womenofwayland.com/" target="_blank">Women of Wayland Podcast</a></li>
+                    <li>Implemented WordPress sites changes for <a class="border" href="https://waylandpersonalphysicians.com/" target="_blank">Wayland Physicians</a> and <a class="border" href="https://www.capecodwaterways.com/" target="_blank">Cape Cod Waterways</a></li>
+                </ul>
+                <ul class="tech-labels">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                    <li>wordpress</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="./img/work/zentility.jpg" alt="zentility">
+            <div class="card-details">
+                <h3><b>Software Intern</b></h3>
+                <p>Zentility Inc.</p>
+                <span class="position-date">Jul 2020 - Aug 2020</span>
+                <ul class="position-desc">
+                    <li>Researched OAuth2 / OIDC identity providers (Okta / Auth0) and multi-tenant role-based
+                        access control, effectiveness of user management, and white-labeling customizability</li>
+                    <li>Discovered method to parse roles in a custom claim when it is not put in JWT “scope” claim</li>
+                    <li>Wrote an Auth0 to Spring Boot integration writeup detailing my discoveries and process</li>
+                </ul>
+                <ul class="tech-labels">
+                    <li>spring boot</li>
+                    <li>angular</li>
+                    <li>auth0</li>
+                    <li>oauth2</li>
+                    <li>jwt</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="./img/work/massenergize.png" alt="zentility">
+            <div class="card-details">
+                <h3><b>Frontend Developer</b></h3>
+                <p>MassEnergize Inc.</p>
+                <span class="position-date">Jun 2019 - Sep 2019</span>
+                <ul class="position-desc">
+                    <li>Drove implementation of a website using React, in collaboration with twelve coworkers</li>
+                    <li>Restyled UI to be mobile-responsive and resolved long-standing navigation bar issue</li>
+                </ul>
+                <ul class="tech-labels">
+                    <li>react</li>
+                    <li>redux</li>
+                    <li>bootstrap</li>
+                    <li>git</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing" target="_blank"><button class="mt"><small>absolutely everything i've done</small></button></a>
     </section>
 
+
     <!-- Projects -->
-    <section class="section-project">
-        <p>Projects</p>
+    <section class="section-projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <img class="card-pic" src="./img/projects/whsassassin.png" alt="whsassassin">
+            <div class="card-details">
+                <h3><b>WHSAssassin</b></h3>
+
+                <div class="project-links">
+                    <a href="https://github.com/minglethepringle/WHSAssassin" target="_blank">
+                        <img src="./img/icons/github.png" alt="github">
+                    </a>
+                </div>
+
+                <p><small>Manages gameplay of WHS Senior Assassin; cyclically assigns randomized objectives; allows
+                    moderator approval of completed tasks; displays image feed of results <i>(100+ players)</i></small></p>
+                
+                <ul class="tech-labels">
+                    <li>react</li>
+                    <li>firestore</li>
+                    <li>nosql</li>
+                    <li>firebase</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="./img/projects/whsremote.png" alt="whsremote">
+            <div class="card-details">
+                <h3><b>WHSRemote</b></h3>
+
+                <div class="project-links">
+                    <a href="https://github.com/WHSRemote" target="_blank">
+                        <img src="./img/icons/github.png" alt="github">
+                    </a>
+                    <a href="https://www.youtube.com/playlist?list=PL5Y2tGfke7b720jp0GcGiOTQhT_SCItpA" target="_blank">
+                        <img src="./img/icons/youtube.png" alt="youtube">
+                    </a>
+                </div>
+
+                <p><small>Created a remote learning webapp for Wayland High students. Contains Zoom/Google Meet class links, auto-filled class schedules, current class display on
+                    home page, homework planner, and other useful links <i>(over 500 users)</i></small></p>
+                
+                <ul class="tech-labels">
+                    <li>react</li>
+                    <li>spring boot</li>
+                    <li>mysql</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="./img/projects/eartheyes.png" alt="EarthEyes">
+            <div class="card-details">
+                <h3><b>EarthEyes</b></h3>
+
+                <div class="project-links">
+                    <a href="https://github.com/minglethepringle/EarthEyes" target="_blank">
+                        <img src="./img/icons/github.png" alt="github">
+                    </a>
+                </div>
+
+                <p><small>Utilizes computer vision and Earth911 API to recognize objects and determine where they
+                    can be recycled <i>(second place at MetroHacks 2019)</i></small></p>
+                
+                <ul class="tech-labels">
+                    <li>pwa</li>
+                    <li>node.js</li>
+                    <li>tensorflow</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="https://github.com/minglethepringle" target="_blank"><button class="mt"><small>all projects i've created</small></button></a>
     </section>
 
     <!-- Skills -->
     <section class="section-skills">
-        <p>Skills</p>
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <img src="./img/skills/react.png" alt="react">
+            <img src="./img/skills/angular.png" alt="angular">
+            <img src="./img/skills/node.png" alt="nodejs">
+            <img src="./img/skills/spring.png" alt="spring boot">
+            <img src="./img/skills/firebase.png" alt="firebase">
+            <img src="./img/skills/git.png" alt="git">
+            <img src="./img/skills/python.png" alt="python">
+        </div>
     </section>
+
+    <!-- Cat Corner -->
+    <section class="section-cat">
+        <h2>Cat Corner</h2>
+        <small><i>A tribute to the best cat in the world, Tabby. RIP.</i></small>
+
+        <div class="cat-slideshow">
+            <button class="slideshow-btn left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="slideshow-btn right" onclick="plusDivs(+1)">&#10095;</button> 
+            <img class="cat-img" src="./img/cat/cat1.jpg">
+            <img class="cat-img" src="./img/cat/cat2.jpg">
+            <img class="cat-img" src="./img/cat/cat3.jpg">
+            <img class="cat-img" src="./img/cat/cat4.jpg">
+            <img class="cat-img" src="./img/cat/cat5.jpg">
+            <img class="cat-img" src="./img/cat/cat6.jpg">
+            <img class="cat-img" src="./img/cat/cat7.jpg">
+        </div>
+
+    </section>
+
+    <!-- Slideshow Script -->
+    <script>
+        // Copy pasted from W3Schools
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("cat-img");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>coding plain html & css is actually quite fun :)</p>
+    </footer>
 </body>
 </html>

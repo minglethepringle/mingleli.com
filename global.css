@@ -17,11 +17,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
 }
 
 button {
     background-color: #151414;
     color: #fff;
+    text-decoration: none;
     font-family: Poppins;
     font-size: 20px;
     font-weight: 400;
@@ -39,12 +41,46 @@ button:hover {
     transform: translateY(-5px);
 }
 
+a.border {
+    color: #151414;
+    text-decoration: none;
+    border-bottom: 1px solid #151414;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+a.border:hover {
+    color: #0069ff;
+    border-bottom: 1px solid #0069ff;
+}
+
 h1 {
     font-size: 3.5rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
     font-weight: 400;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mr {
+    margin-right: 1rem;
+}
+
+.ml {
+    margin-left: 1rem;
 }
