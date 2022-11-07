@@ -281,6 +281,7 @@ footer {
 
     div.json-container {
         width: 100%;
+        padding: 3rem 2rem;
     }
 
     div.card {
@@ -295,7 +296,7 @@ footer {
 
     ul.position-desc {
         text-align: left;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     ul.tech-labels {
@@ -303,7 +304,7 @@ footer {
     }
 
     ul.tech-labels li {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
 
     div.skills {
