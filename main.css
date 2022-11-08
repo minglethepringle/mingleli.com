@@ -50,7 +50,7 @@ div.json-container {
     margin: 1rem 0;
     padding: 3rem 4rem;
     width: 550px;
-    border-radius: 5px;
+    border-radius: 1rem;
 
     position: relative;
 }
@@ -97,7 +97,7 @@ div.card {
     margin: 1rem 0;
     width: 800px;
     padding: 1.5rem;
-    border-radius: 5px;
+    border-radius: 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -141,17 +141,19 @@ ul.position-desc li {
 
 ul.tech-labels {
     padding: 0;
+    margin: 0.5rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
 }
 
 ul.tech-labels li {
-    margin: 0 0.25rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 5px;
+    margin: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
     background-color: #151414;
     color: #cdcdcd;
     font-size: 0.75rem;
@@ -232,6 +234,7 @@ div.cat-slideshow {
     overflow: hidden;
     width: 550px;
     height: 300px;
+    border-radius: 1rem;
 }
 
 button.slideshow-btn {
@@ -243,6 +246,7 @@ button.slideshow-btn {
     background-color: rgba(21, 20, 20, 0.5);
     color: #ffffff;
     font-size: 2rem;
+    border-radius: 0;
 }
 
 button.slideshow-btn:hover {
