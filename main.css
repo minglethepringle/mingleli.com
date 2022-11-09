@@ -51,18 +51,17 @@ button.down-arrow {
     cursor: pointer;
     color: #151414;
     position: absolute;
-    bottom: 2rem;
     
     animation: MoveUpDown 2.5s ease-in-out infinite;
 }
 
 @keyframes MoveUpDown {
     0%, 100% {
-      bottom: 2rem;
+      bottom: 5rem;
     }
 
     50% {
-      bottom: 1rem;
+      bottom: 4rem;
     }
 }
 
