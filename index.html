@@ -34,10 +34,15 @@
                 <a href="./resume.pdf" target="_blank"><button>resume</button></a>
             </div>
         </div>
+        <button class="down-arrow" onclick="document.getElementById('scroll-to').scrollIntoView();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+        </button>
     </section>
 
     <!-- JSON section -->
-    <section class="section-json">
+    <section class="section-json" id="scroll-to">
         <h2>About Me</h2>
 
         <div class="json-container">
@@ -52,8 +57,7 @@
                 <p class="indent"><span class="key">"loves"</span>: [<span class="value">"code"</span>,
                     <span class="value">"cats"</span>,
                     <span class="value">"computers"</span>],</p>
-                <p class="indent"><span class="key">"videoGames"</span>: [<span class="value">"Rocket League"</span>,
-                        <span class="value">"Fortnite"</span>],</p>
+                <p class="indent"><span class="key">"videoGames"</span>: [<span class="value">"Rocket League"</span>],</p>
                 <p class="indent"><span class="key">"sports"</span>: [<span class="value">"ping pong"</span>,
                             <span class="value">"volleyball"</span>],</p>
                 <p class="indent"><span class="key">"instrument"</span>: <span class="value">"<a href="https://www.youtube.com/watch?v=6Dg6jwdznJE" target="_blank">marimba</a>"</span>,</p>
@@ -131,7 +135,7 @@
             </div>
         </div>
 
-        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing" target="_blank"><button class="mt"><small>absolutely everything i've done</small></button></a>
+        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing" target="_blank"><button class="mt"><small>my entire work history</small></button></a>
     </section>
 
 

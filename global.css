@@ -4,6 +4,10 @@
     - Off-Black: #151414
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     margin: 0;
