@@ -1,11 +1,12 @@
 /*
     Colors:
-    - White: #ffffff
+    - White: #fcfcfc
     - Off-Black: #151414
 */
 
 html {
     scroll-behavior: smooth;
+    background-color: #fcfcfc;
 }
 
 body {
@@ -27,7 +28,7 @@ section {
 button {
     border: 2px solid #151414;
     background-color: #151414;
-    color: #fff;
+    color: #fcfcfc;
     text-decoration: none;
     font-family: Poppins;
     font-size: 20px;
@@ -38,11 +39,11 @@ button {
 }
 
 button:hover {
-    background-color: #fff;
+    background-color: #fcfcfc;
     color: #151414;
     cursor: pointer;
-    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0, 0, 0, .3));
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, .3));
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
 }
@@ -58,6 +59,15 @@ a.border {
 a.border:hover {
     color: #0069ff;
     border-bottom: 1px solid #0069ff;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 h1 {

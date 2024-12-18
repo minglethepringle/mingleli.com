@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <!-- Banner -->
     <section class="section-banner">
@@ -21,7 +23,7 @@
             <img class="profile-pic" src="./img/profile.jpg" alt="profile">
             <div class="banner-text">
                 <h1>Mingle Li</h1>
-                <h3>Software Engineer, Student</h3>
+                <h3>Software Engineer</h3>
                 <div class="socials-container">
                     <a href="https://github.com/minglethepringle" target="_blank">
                         <img src="./img/icons/github.png" alt="github">
@@ -37,9 +39,11 @@
             </div>
         </div>
         <button class="down-arrow" onclick="document.getElementById('scroll-to').scrollIntoView();">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
         </button>
     </section>
 
@@ -49,27 +53,36 @@
 
         <div class="json-container">
             <div class="window-btns">
-                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+                    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                        <circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+                        <circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+                        <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+                    </g>
+                </svg>
             </div>
             <p>{</p>
-                <p class="indent"><span class="key">"name"</span>: <span class="value">"Mingle Li"</span>,</p>
-                <p class="indent"><span class="key">"born"</span>: <span class="value number">2003</span>,</p>
-                <p class="indent"><span class="key">"location"</span>: <span class="value">"Massachusetts"</span>,</p>
-                <p class="indent"><span class="key">"school"</span>: <span class="value">"Northeastern University"</span>,</p>
-                <p class="indent"><span class="key">"loves"</span>: [<span class="value">"code"</span>,
-                    <span class="value">"cats"</span>,
-                    <span class="value">"computers"</span>],</p>
-                <p class="indent"><span class="key">"videoGames"</span>: [<span class="value">"Rocket League"</span>],</p>
-                <p class="indent"><span class="key">"sports"</span>: [<span class="value">"pickleball"</span>, <span class="value">"ping pong"</span>],</p>
-                <p class="indent"><span class="key">"instrument"</span>: <span class="value">"<a href="https://www.youtube.com/watch?v=6Dg6jwdznJE" target="_blank">marimba</a>"</span>,</p>
-                <p class="indent"><span class="key">"personalityType"</span>: <span class="value">"ESFJ"</span>,</p>
-                <p class="indent"><span class="key">"maxPiazzaContributions"</span>: <span class="value number">1038</span>,</p>
-                <p class="indent"><span class="key">"takenBy"</span>: <span class="value">"Lilli Tobe ❤️"</span></p>
+            <p class="indent"><span class="key">"name"</span>: <span class="value">"Mingle Li"</span>,</p>
+            <p class="indent"><span class="key">"born"</span>: <span class="value number">2003</span>,</p>
+            <p class="indent"><span class="key">"location"</span>: <span class="value">"Massachusetts"</span>,</p>
+            <p class="indent"><span class="key">"school"</span>: <span class="value">"Northeastern University"</span>,
+            </p>
+            <p class="indent"><span class="key">"graduated"</span>: <span class="value number">true</span>,</p>
+            <p class="indent"><span class="key">"videoGames"</span>: [<span class="value">"RL"</span>, <span
+                    class="value">"CS2"</span>, <span class="value">"TF2"</span>],</p>
+            <p class="indent"><span class="key">"sports"</span>: [<span class="value">"pickleball"</span>, <span
+                    class="value">"ping pong"</span>],</p>
+            <p class="indent"><span class="key">"instrument"</span>: <span class="value">"<a
+                        href="https://www.youtube.com/watch?v=6Dg6jwdznJE" target="_blank">marimba</a>"</span>,</p>
+            <p class="indent"><span class="key">"personalityType"</span>: <span class="value">"ESFJ"</span>,</p>
+            <p class="indent"><span class="key">"maxPiazzaContributions"</span>: <span class="value number">1038</span>,
+            </p>
+            <p class="indent"><span class="key">"takenBy"</span>: <span class="value">"Lilli Tobe ❤️"</span></p>
             <p>}</p>
         </div>
     </section>
 
-    
+
     <!-- Work -->
     <section class="section-work">
         <h2>Work Experience</h2>
@@ -77,12 +90,26 @@
         <div class="card">
             <img class="card-pic" src="./img/work/emoney.png" alt="eMoney">
             <div class="card-details">
-                <h3><b>Software Engineer Co-op</b></h3>
+                <h3><b>Associate Software Engineer</b></h3>
                 <p>eMoney Advisor</p>
-                <span class="position-date">Jan 2024 - present</span>
+                <span class="position-date">Jan 2025 - present</span>
                 <ul class="position-desc">
-                    <li>Transition bulk-file financial data importers from on-premise servers to AWS cloud infrastructure, enabling cost-effective horizontal scalability.</li>
-                    <li>Utilize AWS Step Functions, Glue, Lambda, EKS, S3, and Apache Spark to refactor monolithic import software into a modular architecture.</li>
+                    <li>Coming soon 😎</li>
+                </ul>
+                <hr />
+                <h3><b>Backend Software Engineer Co-op</b></h3>
+                <p>eMoney Advisor</p>
+                <span class="position-date">Jan 2024 - Aug 2024</span>
+                <ul class="position-desc">
+                    <li>Transformed bulk-file financial data importers, processing 1+ billion rows daily, from
+                        on-premise servers to AWS cloud infrastructure and C# microservices, achieving
+                        cost-effective horizontal scalability</li>
+                    <li>Engineered a concurrent, thread-safe data reconciliation process, retrieving account
+                        and transaction data for 140,000 clients in just 2.3 minutes, ensuring rapid access to
+                        updated data.
+                    </li>
+                    <li>Researched, diagrammed, and implemented a robust flow for handling failed data
+                        validation post-ETL using AWS Step Functions task tokens, EventBridge, and RabbitMQ.</li>
                 </ul>
                 <ul class="tech-labels">
                     <li>c#</li>
@@ -94,28 +121,64 @@
         </div>
 
         <div class="card">
+            <img class="card-pic" src="./img/work/zentility.jpg" alt="zentility">
+            <div class="card-details">
+                <h3><b>Full-Stack Software Engineer Co-op</b></h3>
+                <p>Zentility, Inc.</p>
+                <span class="position-date">Jan 2023 - May 2023</span>
+                <ul class="position-desc">
+                    <li>Developed a scalable Excel bulk importer API, capable of ingesting thousands of
+                        meters in seconds across various commodities, using Java generics, interfaces, and
+                        best practices to ensure reusability for other microservices.</li>
+                    <li>Architected a data stack ranking page that generates dynamic SQL queries with
+                        user-defined group-by and filter clauses, providing flexible insight into energy use</li>
+                    <li>Implemented server-side datatable pagination with caching using Angular Akita and
+                        Redis, enabling seamless navigation through datasets with over 100,000 records.
+                    </li>
+                </ul>
+                <ul class="tech-labels">
+                    <li>angular</li>
+                    <li>spring boot</li>
+                    <li>mysql</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
             <img class="card-pic" src="./img/work/wordpress.png" alt="wordpress">
             <div class="card-details">
                 <h3><b>Web Developer</b></h3>
                 <p>Freelance</p>
                 <span class="position-date">Sep 2019 - present</span>
                 <ul class="position-desc">
-                    <li>Leverage WordPress to design, create, and maintain mobile-responsive sites for numerous podcast, nonprofit, medical, and entrepreneurial businesses.</li>
-                    <li>Communicate with customers to clearly establish requirements and obtain feedback to ensure full satisfaction with the end product.</li>
+                    <li>Leverage WordPress to design, create, and maintain mobile-responsive sites for numerous podcast,
+                        nonprofit, medical, and entrepreneurial businesses.</li>
+                    <li>Communicate with customers to clearly establish requirements and obtain feedback to ensure full
+                        satisfaction with the end product.</li>
                     <li>
                         Portfolio:
-                        <a class="border" href="https://www.nwpcmd.com/" target="_blank">Newton Wellesley Primary Care</a>,
-                        <a class="border" href="https://womenofwayland.com/" target="_blank">Women of Wayland Podcast</a>,
+                        <a class="border" href="https://www.nwpcmd.com/" target="_blank">Newton Wellesley Primary
+                            Care</a>,
+                        <a class="border" href="https://womenofwayland.com/" target="_blank">Women of Wayland
+                            Podcast</a>,
                         <a class="border" href="https://yaminiranjan.com/" target="_blank">Yamini Ranjan</a>,
-                        <a class="border" href="https://wellesleyfca.com/" target="_blank">Wellesley Family Care Associates</a>,
-                        <a class="border" href="https://nowyouarefreepod.com/" target="_blank">Now You Are Free Podcast</a>,
-                        <a class="border" href="https://amenaskincareandfacial.com/" target="_blank">Amena Skincare and Facial</a>,
-                        <a class="border" href="https://anotherwaytogoprogram.org/" target="_blank">Another Way To Go Program</a>,
+                        <a class="border" href="https://wellesleyfca.com/" target="_blank">Wellesley Family Care
+                            Associates</a>,
+                        <a class="border" href="https://nowyouarefreepod.com/" target="_blank">Now You Are Free
+                            Podcast</a>,
+                        <a class="border" href="https://amenaskincareandfacial.com/" target="_blank">Amena Skincare and
+                            Facial</a>,
+                        <a class="border" href="https://anotherwaytogoprogram.org/" target="_blank">Another Way To Go
+                            Program</a>,
                         <a class="border" href="https://sapporobbq.com/" target="_blank">Sapporo Korean Restaurant</a>,
-                        <a class="border" href="https://kenzosushisteakhouse.com/" target="_blank">Kenzo's Sushi & Steakhouse</a>,
-                        <a class="border" href="https://www.petuniaspetparlor.com/" target="_blank">Petunia's Pet Parlor</a>,
-                        <a class="border" href="https://waylandpersonalphysicians.com/" target="_blank">Wayland Personal Physicians</a>,
-                        <a class="border" href="https://www.capecodwaterways.com/" target="_blank">Cape Cod Waterways</a>
+                        <a class="border" href="https://kenzosushisteakhouse.com/" target="_blank">Kenzo's Sushi &
+                            Steakhouse</a>,
+                        <a class="border" href="https://www.petuniaspetparlor.com/" target="_blank">Petunia's Pet
+                            Parlor</a>,
+                        <a class="border" href="https://waylandpersonalphysicians.com/" target="_blank">Wayland Personal
+                            Physicians</a>,
+                        <a class="border" href="https://www.capecodwaterways.com/" target="_blank">Cape Cod
+                            Waterways</a>
                     </li>
                 </ul>
                 <ul class="tech-labels">
@@ -126,47 +189,8 @@
             </div>
         </div>
 
-        <div class="card">
-            <img class="card-pic" src="./img/work/toast.png" alt="toast">
-            <div class="card-details">
-                <h3><b>iOS Software Engineer Intern</b></h3>
-                <p>Toast, Inc.</p>
-                <span class="position-date">Jun 2023 - Aug 2023</span>
-                <ul class="position-desc">
-                    <li>Designed and implemented a "Favorite Order" feature into the <a class="border" href="https://www.toasttakeout.com/" target="_blank">Toast Takeout iOS app</a>,
-                        allowing users to mark orders as favorites and reorder them conveniently.</li>
-                    <li>Identified and resolved numerous UIKit-SwiftUI interoperability bugs in iOS 15 and 16.</li>
-                </ul>
-                <ul class="tech-labels">
-                    <li>swift</li>
-                    <li>mvvm</li>
-                    <li>swiftui</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-pic" src="./img/work/zentility.jpg" alt="zentility">
-            <div class="card-details">
-                <h3><b>Full-Stack Software Engineer Co-op</b></h3>
-                <p>Zentility, Inc.</p>
-                <span class="position-date">Jan 2023 - May 2023</span>
-                <ul class="position-desc">
-                    <li>Streamlined the onboarding process for new customer acquisitions by developing an
-                        Excel bulk importer for electric and natural gas meters.</li>
-                    <li>Designed a data stack ranking page with dynamic group-by and filter clauses based on
-                        user-selected properties, providing flexible insight into customer energy use.</li>
-                    <li>Introduced server-side datatable pagination with caching using Angular Akita stores.</li>
-                </ul>
-                <ul class="tech-labels">
-                    <li>angular</li>
-                    <li>spring boot</li>
-                    <li>mysql</li>
-                </ul>
-            </div>
-        </div>
-
-        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing" target="_blank"><button class="mt"><small>my entire work history</small></button></a>
+        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing"
+            target="_blank"><button class="mt"><small>my entire work history</small></button></a>
     </section>
 
 
@@ -174,50 +198,43 @@
     <section class="section-projects">
         <h2>Projects</h2>
 
-        <div class="card">
-            <img class="card-pic" src="./img/projects/whsremote.png" alt="whsremote">
-            <div class="card-details">
-                <h3><b>WHSRemote</b></h3>
+        <div class="row">
+            <div class="card">
+                <img class="card-pic" src="./img/projects/whsremote.png" alt="whsremote">
+                <div class="card-details">
+                    <h3><b>WHSRemote</b></h3>
 
-                <div class="project-links">
-                    <a href="https://github.com/WHSRemote" target="_blank">
-                        <img src="./img/icons/github.png" alt="github">
-                    </a>
-                    <a href="https://www.youtube.com/playlist?list=PL5Y2tGfke7b720jp0GcGiOTQhT_SCItpA" target="_blank">
-                        <img src="./img/icons/youtube.png" alt="youtube">
-                    </a>
+                    <div class="project-links">
+                        <a href="https://github.com/WHSRemote" target="_blank">
+                            <img src="./img/icons/github.png" alt="github">
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PL5Y2tGfke7b720jp0GcGiOTQhT_SCItpA"
+                            target="_blank">
+                            <img src="./img/icons/youtube.png" alt="youtube">
+                        </a>
+                    </div>
+
+                    <p><small>Helping Wayland High students navigate remote learning.</small></p>
                 </div>
-
-                <p><small>Created a remote learning webapp for Wayland High students. Contains Zoom/Google Meet class links, auto-filled class schedules, current class display on
-                    home page, homework planner, and other useful links <i>(over 500 users)</i></small></p>
-                
-                <ul class="tech-labels">
-                    <li>react</li>
-                    <li>spring boot</li>
-                    <li>mysql</li>
-                </ul>
             </div>
-        </div>
 
-        <div class="card">
-            <img class="card-pic" src="./img/projects/sapporokaraoke.png" alt="SapporoKaraoke">
-            <div class="card-details">
-                <h3><b>SapporoKaraoke</b></h3>
+            <div class="card">
+                <img class="card-pic" src="./img/projects/sapporokaraoke.png" alt="SapporoKaraoke">
+                <div class="card-details">
+                    <h3><b>SapporoKaraoke</b></h3>
 
-                <div class="project-links">
-                    <a href="https://sapporokaraoke.com/" target="_blank">
-                        <img src="./img/icons/globe.png" alt="globwe">
-                    </a>
+                    <div class="project-links">
+                        <a href="https://github.com/minglethepringle/SapporoKaraoke" target="_blank">
+                            <img src="./img/icons/github.png" alt="github">
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=SNaTGgaWSRY"
+                            target="_blank">
+                            <img src="./img/icons/youtube.png" alt="youtube">
+                        </a>
+                    </div>
+
+                    <p><small>A custom solution for weekend karaoke at Sapporo Restaurant.</small></p>
                 </div>
-
-                <p><small>A full-stack custom-built solution to operate weekend night karaoke for Sapporo Restaurant patrons</small></p>
-                
-                <ul class="tech-labels">
-                    <li>react</li>
-                    <li>node</li>
-                    <li>mpv</li>
-                    <li>ffmpeg</li>
-                </ul>
             </div>
         </div>
 
@@ -233,36 +250,9 @@
                 </div>
 
                 <p><small>Manages gameplay of WHS Senior Assassin; cyclically assigns randomized objectives; allows
-                    moderator approval of completed tasks; displays image feed of results <i>(100+ players)</i></small></p>
-                
-                <ul class="tech-labels">
-                    <li>react</li>
-                    <li>firestore</li>
-                    <li>nosql</li>
-                    <li>firebase</li>
-                </ul>
+                        moderator approval of completed tasks; displays image feed of results <i>(100+
+                            players)</i></small></p>
             </div>
-        </div>
-
-        <a href="https://github.com/minglethepringle" target="_blank"><button class="mt"><small>all projects i've created</small></button></a>
-    </section>
-
-    <!-- Skills -->
-    <section class="section-skills">
-        <h2>Skills</h2>
-
-        <div class="skills">
-            <img src="./img/skills/angular.png" alt="angular">
-            <img src="./img/skills/react.png" alt="react">
-            <img src="./img/skills/spring.png" alt="spring boot">
-            <img src="./img/skills/node.png" alt="nodejs">
-            <img src="./img/skills/dotnet.png" alt="dotnet">
-            <img src="./img/skills/mysql.png" alt="mysql">
-            <img src="./img/skills/postgres.png" alt="postgres">
-            <img src="./img/skills/firebase.png" alt="firebase">
-            <img src="./img/skills/aws.png" alt="aws">
-            <img src="./img/skills/git.png" alt="git">
-            <img src="./img/skills/python.png" alt="python">
         </div>
     </section>
 
@@ -273,7 +263,7 @@
 
         <div class="cat-slideshow">
             <button class="slideshow-btn left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="slideshow-btn right" onclick="plusDivs(+1)">&#10095;</button> 
+            <button class="slideshow-btn right" onclick="plusDivs(+1)">&#10095;</button>
             <img class="cat-img" src="./img/cat/cat1.jpg">
             <img class="cat-img" src="./img/cat/cat2.jpg">
             <img class="cat-img" src="./img/cat/cat3.jpg">
@@ -296,14 +286,14 @@
         }
 
         function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("cat-img");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
+            var i;
+            var x = document.getElementsByClassName("cat-img");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
         }
     </script>
 
@@ -312,4 +302,5 @@
         <p>made with ☕ using plain html & css</p>
     </footer>
 </body>
+
 </html>

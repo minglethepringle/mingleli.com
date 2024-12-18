@@ -125,6 +125,7 @@ div.card {
     width: 800px;
     padding: 1.5rem;
     border-radius: 1rem;
+    background-color: #fdfdfd;
 
     display: flex;
     justify-content: space-between;
@@ -132,7 +133,6 @@ div.card {
     flex-direction: row;
 
     box-shadow: 0 5px 15px rgba(0,0,0,.25);
-
 }
 
 img.card-pic {
@@ -200,6 +200,19 @@ section.section-projects {
     flex-direction: column;
 }
 
+section.section-projects div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 800px;
+}
+
+section.section-projects img.card-pic {
+    width: 100px;
+    border-radius: 0;
+}
+
 div.project-links {
     margin: 0.5rem 0;
 }
@@ -215,32 +228,6 @@ div.project-links img {
 }
 
 div.project-links img:hover {
-    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-}
-
-/* Skills */
-section.section-skills {
-    flex-direction: column;
-}
-
-div.skills {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 550px;
-}
-
-div.skills img {
-    height: 3.5rem;
-    margin: 0.5rem;
-    transition: all .3s ease-in-out;
-}
-
-div.skills img:hover {
     -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
     filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
     -webkit-transform: translateY(-5px);
