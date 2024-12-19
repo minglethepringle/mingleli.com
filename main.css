@@ -210,7 +210,7 @@ section.section-projects div.row {
 
 section.section-projects img.card-pic {
     width: 100px;
-    border-radius: 0;
+    border-radius: 1em;
 }
 
 div.project-links {
@@ -219,7 +219,7 @@ div.project-links {
 
 div.project-links a {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
 }
 
 div.project-links img {
