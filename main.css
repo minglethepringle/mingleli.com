@@ -150,6 +150,7 @@ img.card-pic:hover {
 
 div.card-details {
     padding-left: 1.5rem;
+    flex: 1;
 }
 
 span.position-date {
@@ -204,7 +205,7 @@ section.section-projects div.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     width: 800px;
 }
 
@@ -232,6 +233,15 @@ div.project-links img:hover {
     filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
+}
+
+/* Music */
+section.section-music {
+    flex-direction: column;
+}
+
+section.section-music img.card-pic {
+    border-radius: 1em;
 }
 
 /* Cat Corner */
@@ -315,7 +325,13 @@ footer {
     }
 
     div.card-details {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 0 0;
+    }
+
+    section.section-projects div.row {
+        flex-direction: column;
+        width: 100%;
+        gap: 0rem;
     }
 
     ul.position-desc {
@@ -329,10 +345,6 @@ footer {
 
     ul.tech-labels li {
         font-size: 0.75rem;
-    }
-
-    div.skills {
-        width: 100%;
     }
 
     div.cat-slideshow {
