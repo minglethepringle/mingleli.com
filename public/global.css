@@ -101,3 +101,22 @@ h3 {
 .ml {
     margin-left: 1rem;
 }
+
+div.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 65%;
+    padding: 2rem 0;
+}
+
+div.grid-2 > div {
+    width: auto;
+    margin: 0;
+}
+
+@media (max-width: 820px) {
+    div.grid-2 {
+        width: 100%;
+    }
+}

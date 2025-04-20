@@ -220,7 +220,7 @@
     <section class="section-projects">
         <h2>Projects</h2>
 
-        <div class="projects">
+        <div class="grid-2">
             <div class="card">
                 <img class="card-pic" src="./media/projects/whsremote.png" alt="whsremote">
                 <div class="card-details">
@@ -369,7 +369,8 @@
                         </a>
                     </div>
 
-                    <p><small>A smart bird feeder camera that detects, records and sends email notifications.</small></p>
+                    <p><small>A smart bird feeder camera that detects, records and sends email notifications.</small>
+                    </p>
                 </div>
             </div>
         </div>
@@ -388,23 +389,31 @@
                 <audio class="mt" controls src="./media/music/closerthanfriends.wav"></audio>
             </div>
         </div>
+
+        <div class="card">
+            <img class="card-pic" src="./media/music/eyes.jpg" alt="eyes">
+            <div class="card-details">
+                <h4><b>MNI - Eyes (mingle Remix)</b></h4>
+                <p><small>A remake of Eyes by MNI to learn more about sound design and music production.</small>
+                </p>
+                <audio class="mt" controls src="./media/music/eyes.wav"></audio>
+            </div>
+        </div>
     </section>
 
-    <!-- Cat Corner -->
-    <section class="section-cat">
-        <h2>Cat Corner</h2>
-        <small><i>A tribute to the best cat in the world, Tabby.</i></small>
+    <!-- Photography -->
+    <section class="section-photography">
+        <h2>Portfolio</h2>
+        <small><i>My amateur iPhone photography gallery</i></small>
 
-        <div class="cat-slideshow">
+        <div class="slideshow">
             <button class="slideshow-btn left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="slideshow-btn right" onclick="plusDivs(+1)">&#10095;</button>
-            <img class="cat-img" src="./media/cat/cat1.jpg">
-            <img class="cat-img" src="./media/cat/cat2.jpg">
-            <img class="cat-img" src="./media/cat/cat3.jpg">
-            <img class="cat-img" src="./media/cat/cat4.jpg">
-            <img class="cat-img" src="./media/cat/cat5.jpg">
-            <img class="cat-img" src="./media/cat/cat6.jpg">
-            <img class="cat-img" src="./media/cat/cat7.jpg">
+            <img class="slideshow-img" src="./media/photos/1.jpg">
+            <img class="slideshow-img" src="./media/photos/2.heic">
+            <img class="slideshow-img" src="./media/photos/3.jpg">
+            <img class="slideshow-img" src="./media/photos/4.heic">
+            <img class="slideshow-img" src="./media/photos/5.heic">
         </div>
 
     </section>
@@ -421,7 +430,7 @@
 
         function showDivs(n) {
             var i;
-            var x = document.getElementsByClassName("cat-img");
+            var x = document.getElementsByClassName("slideshow-img");
             if (n > x.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = x.length };
             for (i = 0; i < x.length; i++) {
