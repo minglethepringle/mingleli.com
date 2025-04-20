@@ -1,12 +1,13 @@
 /*
     Colors:
     - White: #fcfcfc
+    - Gray: #eeeeee
     - Off-Black: #151414
 */
 
 html {
     scroll-behavior: smooth;
-    background-color: #fcfcfc;
+    background-color: #eeeeee;
 }
 
 body {
