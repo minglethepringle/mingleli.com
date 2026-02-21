@@ -35,7 +35,7 @@
                         <img src="./media/icons/email.png" alt="email">
                     </a>
                 </div>
-                <a href="./resume.pdf" target="_blank"><button>resume</button></a>
+                <!-- <a href="./resume.pdf" target="_blank"><button>resume</button></a> -->
             </div>
         </div>
         <button class="down-arrow" onclick="document.getElementById('scroll-to').scrollIntoView();">
@@ -90,20 +90,53 @@
         <div class="card">
             <img class="card-pic" src="./media/work/emoney.png" alt="eMoney">
             <div class="card-details">
-                <h3><b>Associate Software Engineer</b></h3>
-                <p>eMoney Advisor</p>
-                <span class="position-date">Jan 2025 - Present</span>
+                <h3><b>Software Engineer</b></h3>
+                <span class="position-date">Dec 2025 - Present</span>
                 <ul class="position-desc">
-                    <li>Coming soon 😎</li>
+                    <li>#eMoneyProud</li>
                 </ul>
                 <hr />
+                <h3><b>Associate Software Engineer</b></h3>
+                <p>eMoney Advisor</p>
+                <span class="position-date">Jan 2025 - Dec 2025</span>
+                <ul class="position-desc">
+                    <li>Led critical AWS cloud infrastructure initiatives, including pioneering new Step Functions
+                        design with JSONata, establishing secure on-premise to AWS connectivity using IAM Roles
+                        Anywhere/CA certificates, and connecting Windows SMB shared drives to Linux Docker containers
+                        via Octopus deployments.</li>
+                    <li>Spearheaded full-stack modernization efforts by developing Bulk File Admin application and
+                        completely rewriting legacy ASP.NET WebForms monolith UI using latest-gen Blazor technology,
+                        including dynamic LINQ query builder UI components.</li>
+                    <li>Architected enterprise-wide developer productivity solutions, including RabbitMQ microservices
+                        abstraction library, HashiCorp-to-AWS Secrets Manager migration with shared libraries reducing
+                        code duplication across teams, and fixing critical dependency injection patterns in
+                        microservices.</li>
+                    <li>Won 1st place in company AI Hackathon by architecting "Bulkie," an AI-powered virtual teammate
+                        using AWS Bedrock (RAG, MCP Action Groups, guardrails), Claude Sonnet, and OpenSearch Serverless
+                        to automate bulk file validation, generate data visualizations with Python/matplotlib, analyze
+                        PRs, and unify knowledge retrieval across Jira/Confluence/on-prem database, bridging the
+                        product-developer gap and empowering cross-functional teams from engineers to product owners.
+                    </li>
+                </ul>
+                <ul class="tech-labels">
+                    <li>c#</li>
+                    <li>blazor</li>
+                    <li>sql</li>
+                    <li>aws</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="./media/work/emoney.png" alt="eMoney">
+            <div class="card-details">
                 <h3><b>Backend Software Engineer Co-op</b></h3>
                 <p>eMoney Advisor</p>
                 <span class="position-date">Jan 2024 - Aug 2024</span>
                 <ul class="position-desc">
                     <li>Transformed bulk-file financial data importers, processing 1+ billion rows daily, from
-                        on-premise servers to AWS cloud infrastructure and C# microservices, achieving
-                        cost-effective horizontal scalability.</li>
+                        on-premise servers to AWS cloud infrastructure and C# microservices, achieving 50% reduction in
+                        processing time (2.6 hrs vs 5.2 hrs) and 85% cost savings.</li>
                     <li>Engineered a concurrent, thread-safe data reconciliation process, retrieving account
                         and transaction data for 140,000 clients in just 2.3 minutes, ensuring rapid access to
                         updated data.
@@ -178,30 +211,15 @@
                     <li>Communicate with customers to clearly establish requirements and obtain feedback to ensure full
                         satisfaction with the end product.</li>
                     <li>
-                        Portfolio:
+                        Showcase:
                         <a class="border" href="https://www.nwpcmd.com/" target="_blank">Newton Wellesley Primary
                             Care</a>,
-                        <a class="border" href="https://womenofwayland.com/" target="_blank">Women of Wayland
-                            Podcast</a>,
-                        <a class="border" href="https://yaminiranjan.com/" target="_blank">Yamini Ranjan</a>,
-                        <a class="border" href="https://wellesleyfca.com/" target="_blank">Wellesley Family Care
-                            Associates</a>,
-                        <a class="border" href="https://nowyouarefreepod.com/" target="_blank">Now You Are Free
-                            Podcast</a>,
-                        <a class="border" href="https://amenaskincareandfacial.com/" target="_blank">Amena Skincare and
-                            Facial</a>,
-                        <a class="border" href="https://anotherwaytogoprogram.org/" target="_blank">Another Way To Go
-                            Program</a>,
-                        <a class="border" href="https://sapporobbq.com/" target="_blank">Sapporo Korean Restaurant</a>,
-                        <a class="border" href="https://kenzosushisteakhouse.com/" target="_blank">Kenzo's Sushi &
-                            Steakhouse</a>,
-                        <a class="border" href="https://www.petuniaspetparlor.com/" target="_blank">Petunia's Pet
-                            Parlor</a>,
                         <a class="border" href="https://waylandpersonalphysicians.com/" target="_blank">Wayland Personal
                             Physicians</a>,
-                        <a class="border" href="https://www.capecodwaterways.com/" target="_blank">Cape Cod
-                            Waterways</a>,
-                        <a class="border" href="https://loosechangeforall.org/" target="_blank">Loose Change</a>
+                        <a class="border" href="https://thevetvalet.com/" target="_blank">Vet Valet</a>,
+                        <a class="border" href="https://womenofwayland.com/" target="_blank">Women of Wayland
+                            Podcast</a>,
+                        <a class="border" href="https://yaminiranjan.com/" target="_blank">Yamini Ranjan</a>
                     </li>
                 </ul>
                 <ul class="tech-labels">
@@ -211,9 +229,6 @@
                 </ul>
             </div>
         </div>
-
-        <a href="https://docs.google.com/document/d/1yafR-9ay6PmoMCeJYPZSXYlYu9S9eChAIO3NqUOz8Xo/edit?usp=sharing"
-            target="_blank"><button class="mt"><small>my entire work history</small></button></a>
     </section>
 
 
@@ -410,12 +425,13 @@
         <div class="slideshow">
             <button class="slideshow-btn left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="slideshow-btn right" onclick="plusDivs(+1)">&#10095;</button>
-            <img class="slideshow-img" src="./media/photos/1.jpg">
-            <img class="slideshow-img" src="./media/photos/2.HEIC">
-            <img class="slideshow-img" src="./media/photos/3.jpg">
-            <img class="slideshow-img" src="./media/photos/4.HEIC">
-            <img class="slideshow-img" src="./media/photos/5.HEIC">
-            <img class="slideshow-img" src="./media/photos/6.heif">
+            <img class="slideshow-img" src="./media/photos/1.jpeg">
+            <img class="slideshow-img" src="./media/photos/2.jpeg">
+            <img class="slideshow-img" src="./media/photos/3.jpeg">
+            <img class="slideshow-img" src="./media/photos/4.jpeg">
+            <img class="slideshow-img" src="./media/photos/5.jpeg">
+            <img class="slideshow-img" src="./media/photos/6.jpeg">
+            <img class="slideshow-img" src="./media/photos/7.jpeg">
         </div>
 
     </section>
