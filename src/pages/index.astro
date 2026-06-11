@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import { site, socials } from "../data/site";
+
+const sections = [
+  { title: "About", href: "/about", hint: "Background & work" },
+  { title: "Projects", href: "/projects", hint: "Things I've built" },
+  { title: "Creative", href: "/creative", hint: "Music & photos" },
+];
+---
+
+<BaseLayout>
+  <!-- Hero -->
+  <section class="mx-auto max-w-5xl px-5 pb-12 pt-20 sm:px-8 sm:pt-28">
+    <div class="grid items-center gap-10 sm:gap-14 md:grid-cols-[1.45fr_1fr]">
+      <div>
+        <p class="mb-4 font-mono text-sm text-accent">{site.role}</p>
+        <h1
+          class="font-display text-5xl font-bold leading-[1.04] tracking-tight sm:text-6xl"
+        >
+          Mingle Li
+        </h1>
+        <p class="mt-5 text-lg text-muted">
+          {site.tagline}
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-accent-fg transition-colors hover:bg-accent-strong"
+          >
+            Resume <Icon name="arrow-up-right" class="size-4" />
+          </a>
+          <a
+            href={`mailto:${site.email}`}
+            class="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 font-medium transition-colors hover:bg-surface-2"
+          >
+            Get in touch
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-3">
+          {
+            socials.map((s) => (
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener"
+                aria-label={s.label}
+                class="grid size-10 place-items-center rounded-lg border border-border text-muted transition-colors hover:border-accent hover:text-accent"
+              >
+                <Icon name={s.name} class="size-5" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-xs md:mx-0">
+        <div
+          class="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-accent-soft"
+          aria-hidden="true"
+        >
+        </div>
+        <img
+          src="/media/profile.jpg"
+          alt="Mingle Li"
+          class="relative aspect-square w-full rounded-2xl border border-border object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore -->
+  <section class="mx-auto max-w-5xl px-5 py-12 sm:px-8">
+    <div class="grid gap-4 sm:grid-cols-3">
+      {
+        sections.map((s) => (
+          <a
+            href={s.href}
+            class="group flex items-center justify-between rounded-xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-accent/40"
+          >
+            <span>
+              <span class="font-display text-xl font-semibold tracking-tight">
+                {s.title}
+              </span>
+              <span class="mt-1 block text-sm text-muted">{s.hint}</span>
+            </span>
+            <Icon
+              name="arrow"
+              class="size-5 shrink-0 text-accent transition-transform group-hover:translate-x-1"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

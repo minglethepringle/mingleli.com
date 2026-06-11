@@ -1,0 +1,217 @@
+---
+import type { Track } from "../data/creative";
+interface Props {
+  track: Track;
+}
+const { track } = Astro.props;
+const thumb = `https://i.ytimg.com/vi/${track.youtubeId}/mqdefault.jpg`;
+const watch = `https://www.youtube.com/watch?v=${track.youtubeId}`;
+---
+
+<article
+  data-yt-audio={track.youtubeId}
+  class="overflow-hidden rounded-xl border border-border bg-surface sm:flex"
+>
+  <!-- Cover (YouTube thumbnail) -->
+  <a
+    href={watch}
+    target="_blank"
+    rel="noopener"
+    class="relative block shrink-0 overflow-hidden bg-surface-2 sm:w-52"
+    aria-label={`Watch ${track.title} on YouTube`}
+  >
+    <img
+      src={thumb}
+      alt={`${track.title} cover art`}
+      loading="lazy"
+      class="h-44 w-full object-cover transition-transform duration-300 hover:scale-[1.03] sm:h-full"
+    />
+  </a>
+
+  <!-- Content + controls -->
+  <div class="flex min-w-0 flex-1 flex-col justify-center gap-3 p-5">
+    <div>
+      <h3 class="font-display text-base font-semibold leading-snug tracking-tight">
+        {track.title}
+      </h3>
+      <p class="mt-1 text-sm leading-relaxed text-muted">{track.description}</p>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button
+        type="button"
+        data-play
+        aria-label="Play"
+        class="grid size-10 shrink-0 place-items-center rounded-full bg-accent text-accent-fg transition-colors hover:bg-accent-strong cursor-pointer"
+      >
+        <svg data-icon-play viewBox="0 0 24 24" class="size-5" fill="currentColor"
+          ><path d="M8 5v14l11-7z"></path></svg
+        >
+        <svg
+          data-icon-pause
+          viewBox="0 0 24 24"
+          class="hidden size-5"
+          fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg
+        >
+      </button>
+
+      <span
+        data-current
+        class="w-9 text-right font-mono text-xs tabular-nums text-muted">0:00</span
+      >
+      <input
+        data-seek
+        type="range"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+        aria-label="Seek"
+        class="h-1.5 flex-1 cursor-pointer accent-accent"
+      />
+      <span data-duration class="w-9 font-mono text-xs tabular-nums text-muted"
+        >0:00</span
+      >
+    </div>
+  </div>
+
+  <!-- Hidden YouTube player (audio only) -->
+  <div class="h-0 w-0 overflow-hidden" aria-hidden="true">
+    <div class="yt-frame"></div>
+  </div>
+</article>
+
+<script>
+  type AnyWin = typeof window & {
+    YT?: any;
+    onYouTubeIframeAPIReady?: () => void;
+    __ytApiPromise?: Promise<void>;
+  };
+
+  function loadApi(): Promise<void> {
+    const w = window as AnyWin;
+    if (w.YT && w.YT.Player) return Promise.resolve();
+    if (w.__ytApiPromise) return w.__ytApiPromise;
+    w.__ytApiPromise = new Promise<void>((resolve) => {
+      const prev = w.onYouTubeIframeAPIReady;
+      w.onYouTubeIframeAPIReady = () => {
+        prev?.();
+        resolve();
+      };
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(tag);
+    });
+    return w.__ytApiPromise;
+  }
+
+  function fmt(t: number): string {
+    if (!isFinite(t) || t < 0) t = 0;
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60)
+      .toString()
+      .padStart(2, "0");
+    return `${m}:${s}`;
+  }
+
+  function setup(root: HTMLElement) {
+    const YT = (window as AnyWin).YT;
+    const id = root.getAttribute("data-yt-audio")!;
+    const mount = root.querySelector(".yt-frame") as HTMLElement;
+    const playBtn = root.querySelector("[data-play]") as HTMLButtonElement;
+    const iconPlay = root.querySelector("[data-icon-play]") as SVGElement;
+    const iconPause = root.querySelector("[data-icon-pause]") as SVGElement;
+    const seek = root.querySelector("[data-seek]") as HTMLInputElement;
+    const curEl = root.querySelector("[data-current]") as HTMLElement;
+    const durEl = root.querySelector("[data-duration]") as HTMLElement;
+
+    let player: any;
+    let raf = 0;
+    let scrubbing = false;
+    let dur = 0;
+
+    const setPlaying = (p: boolean) => {
+      playBtn.setAttribute("aria-label", p ? "Pause" : "Play");
+      iconPlay.classList.toggle("hidden", p);
+      iconPause.classList.toggle("hidden", !p);
+    };
+
+    const refreshDuration = () => {
+      const d = player?.getDuration?.() || 0;
+      if (d && d !== dur) {
+        dur = d;
+        durEl.textContent = fmt(dur);
+      }
+    };
+
+    const updateUI = (t: number) => {
+      curEl.textContent = fmt(t);
+      if (!scrubbing && dur > 0) seek.value = String((t / dur) * 100);
+    };
+
+    const tick = () => {
+      cancelAnimationFrame(raf);
+      const loop = () => {
+        if (player?.getCurrentTime) {
+          if (!dur) refreshDuration();
+          updateUI(player.getCurrentTime() || 0);
+        }
+        raf = requestAnimationFrame(loop);
+      };
+      raf = requestAnimationFrame(loop);
+    };
+
+    player = new YT.Player(mount, {
+      videoId: id,
+      width: "320",
+      height: "180",
+      playerVars: {
+        controls: 0,
+        disablekb: 1,
+        modestbranding: 1,
+        rel: 0,
+        playsinline: 1,
+        fs: 0,
+      },
+      events: {
+        onReady: refreshDuration,
+        onStateChange: (e: any) => {
+          const S = YT.PlayerState;
+          if (e.data === S.PLAYING) {
+            refreshDuration();
+            setPlaying(true);
+            tick();
+          } else if (e.data === S.ENDED) {
+            setPlaying(false);
+            cancelAnimationFrame(raf);
+            player.seekTo(0, true);
+            updateUI(0);
+          } else {
+            setPlaying(false);
+            cancelAnimationFrame(raf);
+          }
+        },
+      },
+    });
+
+    playBtn.addEventListener("click", () => {
+      if (player.getPlayerState?.() === YT.PlayerState.PLAYING) player.pauseVideo();
+      else player.playVideo();
+    });
+
+    seek.addEventListener("input", () => {
+      scrubbing = true;
+      if (dur > 0) curEl.textContent = fmt((Number(seek.value) / 100) * dur);
+    });
+    seek.addEventListener("change", () => {
+      if (dur > 0) player.seekTo((Number(seek.value) / 100) * dur, true);
+      scrubbing = false;
+    });
+  }
+
+  loadApi().then(() => {
+    document
+      .querySelectorAll<HTMLElement>("[data-yt-audio]")
+      .forEach(setup);
+  });
+</script>

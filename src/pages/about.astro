@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import AboutCard from "../components/AboutCard.astro";
+import WorkCard from "../components/WorkCard.astro";
+import { jobs } from "../data/work";
+---
+
+<BaseLayout
+  title="About"
+  description="Mingle Li, a software engineer based in Massachusetts. Background, the facts, and work experience."
+>
+  <section class="mx-auto max-w-5xl px-5 py-16 sm:px-8">
+    <PageHeader
+      eyebrow="about & career"
+      title="Hi there!"
+      subtitle="Yes, Mingle is my real name. Yes, I like to mingle."
+    />
+
+    <div class="grid gap-10 md:grid-cols-2 md:items-start">
+      <div class="space-y-4 text-base leading-relaxed text-muted">
+        <p>
+          I'm a software engineer based in Massachusetts. I graduated from
+          Northeastern University, and these days my work is mostly cloud
+          infrastructure and full-stack applications.
+        </p>
+        <div>
+          <p>Outside of work, I don't touch much software. I'm usually:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li>Playing Rocket League</li>
+            <li>Building in a Minecraft SMP</li>
+            <li>Playing percussion in orchestra</li>
+            <li>Getting on the table tennis or pickleball court</li>
+            <li>Dabbling in electronic music production</li>
+            <li>Slowly working on my Chinese</li>
+          </ul>
+        </div>
+      </div>
+
+      <AboutCard />
+    </div>
+
+    <!-- Career -->
+    <div class="mt-20">
+      <h2 class="font-display text-2xl font-bold tracking-tight">
+        Work experience
+      </h2>
+      <p class="mt-2 text-muted">
+        Will this matter when AI takes over all of our jobs? 🤔
+      </p>
+
+      <div class="mt-8 space-y-5">
+        {jobs.map((job) => <WorkCard job={job} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
