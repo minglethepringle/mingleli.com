@@ -1,8 +1,8 @@
 export const site = {
   name: "Mingle Li",
-  role: "Software Engineer",
+  role: "just another software engineer",
   email: "mingle.g.li@gmail.com",
-  tagline: "Software engineer in Massachusetts. Off the clock: Rocket League, Minecraft, percussion, and racket sports.",
+  tagline: "SWE @ eMoney Advisor. Off the clock: Rocket League, Minecraft, percussion, and racket sports.",
 };
 
 export const socials = [

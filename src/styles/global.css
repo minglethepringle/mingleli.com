@@ -91,6 +91,24 @@
   }
 }
 
+/* ----- Page fade transitions -----
+   Gated behind `html.js` so content stays visible without JS, and behind
+   no-preference so reduced-motion users navigate instantly. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js body {
+    opacity: 0;
+  }
+  html.js.page-ready body {
+    opacity: 1;
+    transition: opacity 0.35s ease;
+  }
+  /* Must follow `page-ready` so it wins at equal specificity. */
+  html.js.page-leaving body {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
