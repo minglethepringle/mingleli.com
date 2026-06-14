@@ -1,0 +1,50 @@
+---
+import type { Project } from "../data/projects";
+import Icon from "./Icon.astro";
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+
+const linkLabel = { github: "GitHub", youtube: "YouTube", globe: "Website" };
+---
+
+<article
+  class="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all hover:-translate-y-1 hover:border-accent/40"
+>
+  <div class="aspect-[16/10] overflow-hidden border-b border-border bg-surface-2">
+    <img
+      src={project.image}
+      alt={project.alt}
+      loading="lazy"
+      class="w-full h-full p-2 object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col p-5">
+    <div class="flex items-start justify-between gap-3">
+      <h3 class="font-display text-lg font-semibold tracking-tight">
+        {project.title}
+      </h3>
+      <div class="flex items-center gap-1.5 pt-0.5">
+        {
+          project.links.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener"
+              aria-label={`${project.title} on ${linkLabel[link.type]}`}
+              class="text-muted transition-colors hover:text-accent"
+            >
+              <Icon name={link.type} class="size-[18px]" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <p class="mt-2 text-sm leading-relaxed text-muted">
+      {project.description}
+    </p>
+  </div>
+</article>

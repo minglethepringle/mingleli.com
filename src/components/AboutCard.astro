@@ -1,0 +1,63 @@
+---
+import { facts, type Fact } from "../data/about";
+
+// Atom One Dark syntax colors
+const KEY = "#56b6c2";
+const STR = "#98c379";
+const NUM = "#d19a66";
+
+const esc = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+// Colored token
+const c = (text: string, color: string) =>
+  `<span style="color:${color}">${esc(text)}</span>`;
+
+// Linked, colored token
+const link = (text: string, href: string, color: string) =>
+  `<a href="${href}" target="_blank" rel="noopener" style="color:${color}" class="underline decoration-[#98c379]/40 underline-offset-2 transition-colors hover:decoration-[#98c379]">${esc(text)}</a>`;
+
+// Build one exact line of JSON as an HTML string (no whitespace surprises)
+function buildLine(f: Fact, last: boolean): string {
+  let s = c(`"${f.key}"`, KEY) + ": ";
+
+  if (f.type === "array") {
+    const arr = f.value as string[];
+    s += "[" + arr.map((v) => c(`"${v}"`, STR)).join(", ") + "]";
+  } else if (f.href) {
+    s += c('"', STR) + link(String(f.value), f.href, STR) + c('"', STR);
+  } else if (f.type === "number" || f.type === "boolean") {
+    s += c(String(f.value), NUM);
+  } else {
+    s += c(`"${f.value}"`, STR);
+  }
+
+  if (!last) s += ",";
+  return s;
+}
+
+const lines = facts.map((f, i) => buildLine(f, i === facts.length - 1));
+---
+
+<div class="overflow-hidden rounded-xl border border-border bg-[#21252b] shadow-sm">
+  <div
+    class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1b1f24] px-4 py-3"
+  >
+    <span class="size-3 rounded-full bg-[#ff5f56]"></span>
+    <span class="size-3 rounded-full bg-[#ffbd2e]"></span>
+    <span class="size-3 rounded-full bg-[#27c93f]"></span>
+    <span class="ml-2 font-mono text-xs text-[#7f848e]">about-me.json</span>
+  </div>
+
+  <div
+    class="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-[#abb2bf] sm:p-6 sm:text-sm"
+  >
+    <div>{"{"}</div>
+    {
+      lines.map((html) => (
+        <div class="whitespace-nowrap pl-5 sm:pl-7" set:html={html} />
+      ))
+    }
+    <div>{"}"}</div>
+  </div>
+</div>
