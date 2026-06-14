@@ -20,7 +20,9 @@ const { eyebrow, title, subtitle } = Astro.props;
   </h1>
   {
     subtitle && (
-      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{subtitle}</p>
+      <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+        {subtitle}
+      </p>
     )
   }
 </header>
