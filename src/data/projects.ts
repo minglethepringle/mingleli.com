@@ -13,65 +13,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "WHSRemote",
-    image: "/media/projects/whsremote.png",
-    alt: "WHSRemote",
-    description: "Helping Wayland High students navigate remote learning.",
+    title: "EstiMayhem",
+    image: "/media/projects/estimayhem.png",
+    alt: "EstiMayhem",
+    description: "Planning poker, but fun. Refinement doesn't have to be boring!",
     links: [
-      { type: "github", href: "https://github.com/WHSRemote" },
-      {
-        type: "youtube",
-        href: "https://www.youtube.com/playlist?list=PL5Y2tGfke7b720jp0GcGiOTQhT_SCItpA",
-      },
+      { type: "youtube", href: "https://www.youtube.com/watch?v=yntoPnZOysg" },
+      { type: "globe", href: "https://estimayhem.com" },
     ],
   },
   {
-    title: "SapporoKaraoke",
-    image: "/media/projects/sapporokaraoke.png",
-    alt: "SapporoKaraoke",
-    description: "A custom solution for weekend karaoke at Sapporo Restaurant.",
-    links: [
-      { type: "github", href: "https://github.com/minglethepringle/SapporoKaraoke" },
-      { type: "youtube", href: "https://www.youtube.com/watch?v=SNaTGgaWSRY" },
-    ],
-  },
-  {
-    title: "WHSAssassin",
-    image: "/media/projects/whsassassin.png",
-    alt: "WHSAssassin",
+    title: "BirdWatcherPi",
+    image: "/media/projects/birdwatcherpi.png",
+    alt: "BirdWatcherPi",
     description:
-      "Automated Senior Assassin gameplay for Wayland High School Class of 2021.",
-    links: [{ type: "github", href: "https://github.com/minglethepringle/WHSAssassin" }],
-  },
-  {
-    title: "TextTheWeather",
-    image: "/media/projects/texttheweather.png",
-    alt: "TextTheWeather",
-    description:
-      "Never forget to check the weather again. Now, the weather comes to you.",
+      "A smart bird feeder camera that detects, records and sends email notifications.",
     links: [
-      { type: "github", href: "https://github.com/minglethepringle/TextTheWeather" },
-    ],
-  },
-  {
-    title: "EarthEyes",
-    image: "/media/projects/eartheyes.png",
-    alt: "EarthEyes",
-    description:
-      "A hackathon project to merge recycling and AI. Second place at MetroHacks.",
-    links: [
-      { type: "github", href: "https://github.com/minglethepringle/EarthEyes" },
-      { type: "youtube", href: "https://www.youtube.com/watch?v=RS1ekTo6DqM" },
-    ],
-  },
-  {
-    title: "TranslatifierBot",
-    image: "/media/projects/translatifierbot.png",
-    alt: "TranslatifierBot",
-    description:
-      "A Reddit copypasta bot with the power of Google Translate (but it's not fluent).",
-    links: [
-      { type: "github", href: "https://github.com/minglethepringle/TranslatifierBot" },
+      { type: "github", href: "https://github.com/minglethepringle/BirdWatcherPi" },
     ],
   },
   {
@@ -87,6 +45,68 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "TextTheWeather",
+    image: "/media/projects/texttheweather.png",
+    alt: "TextTheWeather",
+    description:
+      "Never forget to check the weather again. Now, the weather comes to you.",
+    links: [
+      { type: "github", href: "https://github.com/minglethepringle/TextTheWeather" },
+    ],
+  },
+  {
+    title: "SapporoKaraoke",
+    image: "/media/projects/sapporokaraoke.png",
+    alt: "SapporoKaraoke",
+    description: "A custom solution for weekend karaoke at Sapporo Restaurant.",
+    links: [
+      { type: "github", href: "https://github.com/minglethepringle/SapporoKaraoke" },
+      { type: "youtube", href: "https://www.youtube.com/watch?v=SNaTGgaWSRY" },
+    ],
+  },
+  {
+    title: "TranslatifierBot",
+    image: "/media/projects/translatifierbot.png",
+    alt: "TranslatifierBot",
+    description:
+      "A Reddit copypasta bot with the power of Google Translate (but it's not fluent).",
+    links: [
+      { type: "github", href: "https://github.com/minglethepringle/TranslatifierBot" },
+    ],
+  },
+  {
+    title: "EarthEyes",
+    image: "/media/projects/eartheyes.png",
+    alt: "EarthEyes",
+    description:
+      "A hackathon project to merge recycling and AI. Second place at MetroHacks.",
+    links: [
+      { type: "github", href: "https://github.com/minglethepringle/EarthEyes" },
+      { type: "youtube", href: "https://www.youtube.com/watch?v=RS1ekTo6DqM" },
+    ],
+  },
+  {
+    title: "WHSAssassin",
+    image: "/media/projects/whsassassin.png",
+    alt: "WHSAssassin",
+    description:
+      "Automated Senior Assassin gameplay for Wayland High School Class of 2021.",
+    links: [{ type: "github", href: "https://github.com/minglethepringle/WHSAssassin" }],
+  },
+  {
+    title: "WHSRemote",
+    image: "/media/projects/whsremote.png",
+    alt: "WHSRemote",
+    description: "Helping Wayland High students navigate remote learning.",
+    links: [
+      { type: "github", href: "https://github.com/WHSRemote" },
+      {
+        type: "youtube",
+        href: "https://www.youtube.com/playlist?list=PL5Y2tGfke7b720jp0GcGiOTQhT_SCItpA",
+      },
+    ],
+  },
+  {
     title: "ball.io",
     image: "/media/projects/ballio.png",
     alt: "ball.io",
@@ -95,16 +115,6 @@ export const projects: Project[] = [
     links: [
       { type: "github", href: "https://github.com/minglethepringle/ball.io" },
       { type: "globe", href: "http://ball.eu5.org/" },
-    ],
-  },
-  {
-    title: "BirdWatcherPi",
-    image: "/media/projects/birdwatcherpi.png",
-    alt: "BirdWatcherPi",
-    description:
-      "A smart bird feeder camera that detects, records and sends email notifications.",
-    links: [
-      { type: "github", href: "https://github.com/minglethepringle/BirdWatcherPi" },
     ],
   },
 ];
