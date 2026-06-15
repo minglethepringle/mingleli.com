@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Icon from "../components/Icon.astro";
+import { site } from "../data/site";
+
+const methods = [
+  {
+    label: "Venmo",
+    tag: "@MingleLi",
+    href: "https://venmo.com/u/MingleLi",
+  },
+  {
+    label: "CashApp",
+    tag: "$MingleLi",
+    href: "https://cash.app/$MingleLi",
+  },
+  {
+    label: "Zelle",
+    tag: "email me",
+    href: `mailto:${site.email}`,
+  },
+];
+---
+
+<BaseLayout
+  title="Donate"
+  description="Support Mingle Li via a donation."
+>
+  <section class="mx-auto max-w-5xl px-5 py-16 sm:px-8">
+    <PageHeader
+      eyebrow="support"
+      title="Donate"
+      subtitle="If something I created helped you out, a tip is always appreciated. No pressure at all!"
+    />
+
+    <div class="grid gap-4 sm:grid-cols-3">
+      {
+        methods.map((m) => (
+          <a
+            href={m.href}
+            target={m.href.startsWith("mailto:") ? undefined : "_blank"}
+            rel={m.href.startsWith("mailto:") ? undefined : "noopener"}
+            class="group flex items-center justify-between rounded-xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-accent/40"
+          >
+            <span>
+              <span class="font-display text-lg font-semibold tracking-tight">
+                {m.label}
+              </span>
+              <span class="mt-1 block font-mono text-sm text-muted">
+                {m.tag}
+              </span>
+            </span>
+            <Icon
+              name="arrow-up-right"
+              class="size-5 shrink-0 text-accent transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
