@@ -6,6 +6,12 @@ export type Track = {
 
 export const tracks: Track[] = [
   {
+    title: "Ariana Grande - the boy is mine (mingle x knowless Remix)",
+    youtubeId: "Mt6quunCPow",
+    description:
+      'A collab with the GOAT of the SoundCloud bounce genre, <a class="link" href="https://soundcloud.com/knowwless" target="_blank" rel="noopener">knowless</a>.',
+  },
+  {
     title: "Lø Spirit, Dabin, Kai Wachi - Hollow (mingle Remix)",
     youtubeId: "h2OQi1GS3M4",
     description:
