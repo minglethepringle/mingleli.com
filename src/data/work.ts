@@ -16,6 +16,24 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
+    company: "Mingle Tech Solutions",
+    logo: "/media/work/mingletech.png",
+    alt: "Mingle Tech Solutions",
+    roles: [
+      {
+        title: "Tech Consultant",
+        date: "Oct 2026 - Present",
+        bullets: [
+          'Founded <a class="link" href="https://mingletechsolutions.com/" target="_blank" rel="noopener">Mingle Tech Solutions</a> to help Massachusetts small businesses make technology work as hard as they do.',
+          "Build fast, mobile-first websites and keep business listings accurate across Google, Yelp, Apple Maps, and AI assistants so customers can find them.",
+          "Choose and set up the right tools for booking, payments, and communication, and replace repetitive manual work with automation and custom AI-powered software.",
+          'Clients include primary care practices, veterinary and pet care, restaurants, and podcasts. See the <a class="link" href="https://mingletechsolutions.com/portfolio" target="_blank" rel="noopener">portfolio</a>.',
+        ],
+      },
+    ],
+    tech: ["web", "seo", "automation", "ai"],
+  },
+  {
     company: "eMoney Advisor",
     logo: "/media/work/emoney.png",
     alt: "eMoney Advisor",
@@ -87,22 +105,5 @@ export const jobs: Job[] = [
       },
     ],
     tech: ["angular", "spring boot", "mysql"],
-  },
-  {
-    company: "Freelance",
-    logo: "/media/work/wordpress.png",
-    alt: "WordPress",
-    roles: [
-      {
-        title: "Web Developer",
-        date: "Sep 2019 - Present",
-        bullets: [
-          "Leverage WordPress to design, create, and maintain mobile-responsive sites for numerous podcast, nonprofit, medical, and entrepreneurial businesses.",
-          "Communicate with customers to clearly establish requirements and obtain feedback to ensure full satisfaction with the end product.",
-          'Showcase: <a class="link" href="https://www.nwpcmd.com/" target="_blank" rel="noopener">Newton Wellesley Primary Care</a>, <a class="link" href="https://waylandpersonalphysicians.com/" target="_blank" rel="noopener">Wayland Personal Physicians</a>, <a class="link" href="https://thevetvalet.com/" target="_blank" rel="noopener">Vet Valet</a>, <a class="link" href="https://womenofwayland.com/" target="_blank" rel="noopener">Women of Wayland Podcast</a>, <a class="link" href="https://yaminiranjan.com/" target="_blank" rel="noopener">Yamini Ranjan</a>',
-        ],
-      },
-    ],
-    tech: ["elementor", "html", "css"],
   },
 ];

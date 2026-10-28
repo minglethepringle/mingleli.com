@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Icon from "../components/Icon.astro";
-import { site, socials } from "../data/site";
+import { consultingUrl, site, socials } from "../data/site";
 
 const sections = [
   { title: "About", href: "/about", hint: "Background & work" },
   { title: "Projects", href: "/projects", hint: "Things I've built" },
   { title: "Creative", href: "/creative", hint: "Music & photos" },
   { title: "Blog", href: "/blog", hint: "My brain dump" },
+  { title: "Consulting", href: consultingUrl, hint: "Tech help for small businesses", external: true },
 ];
 ---
 
@@ -82,7 +83,12 @@ const sections = [
         sections.map((s) => (
           <a
             href={s.href}
-            class="group flex items-center justify-between rounded-xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-accent/40"
+            target={s.external ? "_blank" : undefined}
+            rel={s.external ? "noopener" : undefined}
+            class:list={[
+              "group flex items-center justify-between rounded-xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-accent/40",
+              s.external && "sm:col-span-2",
+            ]}
           >
             <span>
               <span class="font-display text-xl font-semibold tracking-tight">
@@ -91,7 +97,7 @@ const sections = [
               <span class="mt-1 block text-sm text-muted">{s.hint}</span>
             </span>
             <Icon
-              name="arrow"
+              name={s.external ? "arrow-up-right" : "arrow"}
               class="size-5 shrink-0 text-accent transition-transform group-hover:translate-x-1"
             />
           </a>

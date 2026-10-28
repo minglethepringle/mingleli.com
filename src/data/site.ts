@@ -11,10 +11,13 @@ export const socials = [
   { name: "mail" as const, label: "Email", href: "mailto:mingle.g.li@gmail.com" },
 ];
 
-export const nav = [
+export const consultingUrl = "https://mingletechsolutions.com/";
+
+export const nav: { label: string; href: string; external?: boolean }[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Creative", href: "/creative" },
   { label: "Blog", href: "/blog" },
+  { label: "Consulting", href: consultingUrl, external: true },
 ];

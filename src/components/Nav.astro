@@ -25,6 +25,8 @@ const isActive = (href: string) =>
             <li>
               <a
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener" : undefined}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 class:list={[
                   "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
@@ -72,6 +74,8 @@ const isActive = (href: string) =>
           <li>
             <a
               href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noopener" : undefined}
               aria-current={isActive(item.href) ? "page" : undefined}
               class:list={[
                 "block rounded-lg px-3 py-2 text-sm font-medium transition-colors",
